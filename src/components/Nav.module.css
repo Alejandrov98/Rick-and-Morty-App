@@ -1,0 +1,71 @@
+.nav {
+  display: flex;
+  background-color: peachpuff;
+  border-radius: 25px;
+  box-shadow: 2%;
+  border-bottom: 15px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.searchBar {
+  
+  background-color: rgb(132, 93, 200);
+  border-radius: 15px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.button {
+  background-color: peachpuff;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 10px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+  color: #7ac76b;
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: capitalize;
+  
+  
+}
+
+.Links {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #d8680c;
+  padding: 25px;
+  display: flex;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  
+}
+
+
+
+.links:hover {
+  display: flex;
+  color: white;
+  background-color: hotpink;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.divSearch {
+  border-radius: 10px;
+  padding: 15px;
+  
+}

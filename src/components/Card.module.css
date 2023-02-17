@@ -1,0 +1,33 @@
+.container {
+  display: block;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255, 0.9);
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px rgb(64, 64, 64);
+  padding: 20px;
+  margin-top: 2%;
+  flex-wrap: wrap;
+  transform: scale(1.05); 
+  .container:hover {
+    transform: scale(1.05);
+  }
+}
+
+
+
+.img {
+  border-radius: 15px;
+  border: solid 1px black;
+}
+
+.boton {
+  width: 5vh;
+  height: 5vh;
+  margin-left: 250px;
+  background-color: aliceblue;
+  color: red;
+  font-size: 13px;
+}
