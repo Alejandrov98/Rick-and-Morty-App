@@ -8,7 +8,7 @@ export const REMOVE_FAV = "REMOVE_FAV";
 export function addFav(personaje) {
   return async function (dispatch) {
     try {
-      await fetch("http://localhost:3001/fav", {
+      await fetch("http://localhost:3001/favorites", {
         method: "POST",
         body: JSON.stringify(personaje),
         headers: {
@@ -31,7 +31,7 @@ export function addFav(personaje) {
 export function removeFav(id) {
   return async function (dispatch) {
     try {
-      await fetch(`http://localhost:3001/fav/${id}`, {
+      await fetch(`http://localhost:3001/favorites/${id}`, {
         method: "DELETE",
       })
         .then((response) => response.json())

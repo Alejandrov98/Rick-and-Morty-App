@@ -1,3 +1,3 @@
-const favorites = []
+let favs = [];
 
-module.exports = favorites;
+module.exports = favs;

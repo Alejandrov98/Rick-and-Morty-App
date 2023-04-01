@@ -1,25 +1,42 @@
-const { Router } = require("express");
+const express = require('express');
+const router = express.Router();
+const { getCharById } = require('../controllers/getCharById');
+const { getCharDetail } = require('../controllers/getCharDetail');
+let favs = require('../utils/favs');
 
-var { getCharById } = require("../controllers/getCharById.js");
-var { getCharDetail } = require("../controllers/getCharDetail.js");
-var { addFav, getFavs, deleteFav } = require("../controllers/favController.js");
-const getAllChars = require("../controllers/getAllChars.js");
 
-const router = Router();
-
-router.get("/rickandmorty/allCharacters", async (req, res) => {
-  try {
-    const allCharacters = await getAllChars();
-    res.status(200).json(allCharacters);
-  } catch (error) {
-    res.status(404).send("Hubo un error");
-  }
-});
 router.get("/onsearch/:id", getCharById);
-router.get("/detail/:id", getCharDetail);
+router.get('/detail/:detailId', getCharDetail);
 
-router.post("/fav", addFav);
-router.get("/fav", getFavs);
-router.delete("/fav/:id", deleteFav);
+router.get('/favorites', (req, res) => {
+    res.status(200).json(favs);
+})
+
+router.post('/favorites', (req, res) => {
+    const { id, name, species, image, gender} = req.body;
+    console.log(req.body);
+    if(!id || !name || !species || !image || !gender) {
+        return res.status(404).send('Faltan datos')
+    }
+    else {
+        const character = {
+            id, 
+            name, 
+            species,
+            image,
+            gender
+        }
+        favs.push(character);
+        res.status(200).json(favs);
+    }
+})
+
+router.delete('/fav/:id', (req, res) => {
+    const { id } = req.params;
+    const characterDelete = favs.filter(char => char.id !== Number(id));
+    console.log("soy delete", characterDelete);
+    favs = characterDelete;
+    res.status(200).send("Se eliminó el personaje correctamente");
+})
 
 module.exports = router;
