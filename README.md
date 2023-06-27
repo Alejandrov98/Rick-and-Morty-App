@@ -6,7 +6,6 @@ Este repositorio contiene una aplicación de Rick y Morty que utiliza una API p�
 
 La principal finalidad de esta aplicación es proporcionar un entorno de aprendizaje para familiarizarse con tecnologías populares como React, Express, Node.js, entre otras. El proyecto está diseñado para ayudar a los desarrolladores a explorar y practicar el desarrollo de aplicaciones web modernas.
 
-![Rick and Morty App](app_screenshot.png)
 
 ## Características
 
